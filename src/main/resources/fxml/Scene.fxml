@@ -1,0 +1,42 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.RadioButton?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.control.ToggleGroup?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.web.WebView?>
+
+<AnchorPane id="AnchorPane" prefHeight="865.0" prefWidth="1541.0" xmlns="http://javafx.com/javafx/11.0.1" xmlns:fx="http://javafx.com/fxml/1" fx:controller="com.mycompany.webdeneme.FXMLController">
+    <children>
+      <WebView fx:id="webView" layoutX="199.0" layoutY="14.0" prefHeight="839.0" prefWidth="1334.0" />
+      <Button fx:id="BtnBaslat" layoutX="14.0" layoutY="259.0" mnemonicParsing="false" onAction="#baslatClick" prefHeight="32.0" prefWidth="105.0" text="Başlat" />
+      <Label layoutX="11.0" layoutY="88.0" text="İslem Süresi = " />
+      <Label fx:id="islemLBL" layoutX="97.0" layoutY="88.0" text="0" />
+      <CheckBox fx:id="CHSinirsizIslem" layoutX="14.0" layoutY="14.0" mnemonicParsing="false" text="Sınırsız Döngü" />
+      <CheckBox fx:id="CHXislem" layoutX="14.0" layoutY="38.0" mnemonicParsing="false" text="X İşlemde bir değiştir" />
+      <Label layoutX="11.0" layoutY="110.0" text="Mola Süresi = " />
+      <Label fx:id="molaLBL" layoutX="96.0" layoutY="110.0" text="0" />
+      <RadioButton fx:id="RDMAbone" layoutX="14.0" layoutY="153.0" mnemonicParsing="false" onAction="#RDMAboneClick" text="abone.canliabonesayaci.com">
+         <toggleGroup>
+            <ToggleGroup fx:id="site" />
+         </toggleGroup></RadioButton>
+      <RadioButton fx:id="RDMTakipKazan" layoutX="14.0" layoutY="178.0" mnemonicParsing="false" onAction="#RDMTakipKazanClick" text="takipkazan.net" toggleGroup="$site" />
+      <RadioButton fx:id="RDMKazanYoutube" layoutX="14.0" layoutY="204.0" mnemonicParsing="false" onAction="#RDMKazanYoutubeClick" text="kazan.youtubeturkiye.net" toggleGroup="$site" />
+      <Button fx:id="BtnDurdur" layoutX="14.0" layoutY="305.0" mnemonicParsing="false" onAction="#BtnDurdurClick" prefHeight="39.0" prefWidth="105.0" text="Durdur" />
+      <Label layoutX="14.0" layoutY="357.0" text="Mola Süresi =" />
+      <Label layoutX="14.0" layoutY="387.0" text="İşlem Sayısı =" />
+      <TextField fx:id="TxtMolaSuresi" layoutX="112.0" layoutY="353.0" prefHeight="25.0" prefWidth="72.0" text="20" />
+      <TextField fx:id="TxtIslemSirasi" layoutX="112.0" layoutY="383.0" prefHeight="25.0" prefWidth="72.0" text="40" />
+      <TextField fx:id="TxtKapatmaSuresi" layoutX="125.0" layoutY="555.0" prefHeight="25.0" prefWidth="61.0" />
+      <Button fx:id="BtnZamanlPcKapat" layoutX="29.0" layoutY="450.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="149.0" text="Zamanlı PC Kapatma" />
+      <Button fx:id="BtnKapatmaDurdur" layoutX="29.0" layoutY="503.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="149.0" text="Kapatmayı Durdur" />
+      <Label layoutX="15.0" layoutY="559.0" text="Kapatma Dakikası =" />
+      <CheckBox fx:id="CHIslemSonrası" layoutX="14.0" layoutY="62.0" mnemonicParsing="false" text="İşlem Sonrası Delay" />
+      <Label layoutX="11.0" layoutY="129.0" text="İşlem Sayısı =" />
+      <Label fx:id="islemSayisiLBL" layoutX="96.0" layoutY="129.0" text="0" />
+      <RadioButton fx:id="RDMLinkCollider" layoutX="15.0" layoutY="229.0" mnemonicParsing="false" onAction="#RDMLinkColliderClick" text="www.linkcollider.com" toggleGroup="$site" />
+    </children>
+</AnchorPane>
